@@ -29,12 +29,14 @@ function merge(array, lb, mid, ub) {
 
   // compare left array element against right array element
   // assign the lowest element from them to the array
+
   // left array initial value
   let i = 0;
   // right array initial value
   let j = 0;
   // sorted array initial value
   let k = lb;
+
   while (i < nL && j < nR) {
     if (L[i] <= R[j]) {
       array[k] = L[i];
@@ -60,9 +62,12 @@ function merge(array, lb, mid, ub) {
   }
 }
 
-const unsortedArray = [5, 2, 1, 3, 6, 4];
+const unsortedArray = [5, 2, 1, 3, 6, 4, 7];
 console.log("Given Array");
 console.log(unsortedArray);
 mergeSort(unsortedArray, 0, unsortedArray.length - 1);
 console.log("Sorted Array");
-console.log(unsortedArray);
+const sortedArray = unsortedArray;
+console.log(sortedArray);
+
+module.exports = mergeSort;
